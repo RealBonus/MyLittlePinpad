@@ -9,25 +9,27 @@ import UIKit
 
 open class PinpadViewController: UIViewController {
 	public static func instantiateFromNib() -> PinpadViewController {
-		let bundle = Bundle(for: PinpadViewController.self)
-		return bundle.loadNibNamed("PinpadViewController", owner: nil, options: nil)!.first as! PinpadViewController
+		let podBundle = Bundle(for: PinpadViewController.self)
+		let resourceBundle = Bundle(url: podBundle.url(forResource: "MyLittlePinpad", withExtension: "bundle")!)!
+		
+		return resourceBundle.loadNibNamed("PinpadViewController", owner: nil, options: nil)!.first as! PinpadViewController
 	}
 
 	// MARK: - Properties
 	public weak var delegate: PinpadDelegate?
 	
 	/// Amount of digits in pincode
-	public var pinCount: Int = 6 {
+	public var pinDigits: Int = 6 {
 		didSet {
-			remakePlaceholders(count: pinCount)
+			remakePlaceholders(count: pinDigits)
 		}
 	}
 	
 	/// Entered digits
-	private(set) var pinDigits: [Int] = []
+	private(set) var digits: [Int] = []
 	
 	public var pin: String {
-		return pinDigits.map({String($0)}).joined()
+		return digits.map({String($0)}).joined()
 	}
 	
 	public var biometryButtonType: PinpadBiometryButtonType = .faceID {
@@ -116,7 +118,7 @@ open class PinpadViewController: UIViewController {
 	
 	public var placeholdersSize: CGFloat = 20 {
 		didSet {
-			remakePlaceholders(count: pinCount)
+			remakePlaceholders(count: pinDigits)
 		}
 	}
 	
@@ -140,10 +142,11 @@ open class PinpadViewController: UIViewController {
 		bottomConstrain.constant = (self.view.bounds.width - mainStackView.bounds.width)/4
 		
 		for pin in placeholdersStackView.subviews.flatMap({$0 as? PinPlaceholderView}) {
+			pin.borderColor = bordersColor
 			placeholders.append(pin)
 		}
 		
-		remakePlaceholders(count: pinCount)
+		remakePlaceholders(count: pinDigits)
     }
 	
 	
@@ -203,30 +206,34 @@ open class PinpadViewController: UIViewController {
 	
 	// MARK: - Pin
 	private func pinAppend(digit: Int) {
-		pinDigits.append(digit)
+		guard digits.count < pinDigits else {
+			return
+		}
+		
+		digits.append(digit)
 		
 		refreshPlaceholders()
 		
-		if pinDigits.count >= pinCount {
+		if digits.count >= pinDigits {
 			delegate?.pinpad(self, didEnterPin: pin)
 		}
 	}
 	
 	private func pinRemoveLatsDigit() {
-		if pinDigits.count > 0 {
-			pinDigits.removeLast()
+		if digits.count > 0 {
+			digits.removeLast()
 		}
 		
 		refreshPlaceholders()
 	}
 	
 	public func clearPin() {
-		pinDigits.removeAll()
+		digits.removeAll()
 		refreshPlaceholders()
 	}
 	
 	private func refreshPlaceholders() {
-		let count = pinDigits.count
+		let count = digits.count
 		
 		let animation = { [weak self] in
 			guard let placeholders = self?.placeholders else {

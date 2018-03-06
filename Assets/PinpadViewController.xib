@@ -14,7 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PinpadViewController" customModule="MyLittlePinpad" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="mTv-Le-RE8" customClass="PinpadViewController" customModule="MyLittlePinpad" customModuleProvider="target">
+        <viewController id="mTv-Le-RE8" customClass="PinpadViewController" customModule="MyLittlePinpad">
             <view key="view" contentMode="scaleToFill" id="1Dp-7R-S8l">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-ft-95J">
                                         <rect key="frame" x="138" y="15" width="20" height="20"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpe-kM-RoQ" customClass="PinPlaceholderView" customModule="MyLittlePinpad" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpe-kM-RoQ" customClass="PinPlaceholderView" customModule="MyLittlePinpad">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -67,7 +67,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="5UB-kN-kGn">
                                 <rect key="frame" x="0.0" y="63" width="296" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-LK-ARv" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-LK-ARv" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="HMC-kL-T26"/>
@@ -87,7 +87,7 @@
                                             <action selector="oneTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="hhC-U4-Hhb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFH-vk-nRs" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFH-vk-nRs" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="103" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vFH-vk-nRs" secondAttribute="height" multiplier="1:1" id="6Ps-MZ-oTR"/>
@@ -107,7 +107,7 @@
                                             <action selector="twoTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="cMv-pr-cb3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3p-mj-r5N" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3p-mj-r5N" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="206" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="X3p-mj-r5N" secondAttribute="height" multiplier="1:1" id="129-2b-T0a"/>
@@ -132,7 +132,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="zzX-FI-PnH">
                                 <rect key="frame" x="0.0" y="166" width="296" height="90.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrC-eh-lnq" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrC-eh-lnq" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="0.0" y="0.5" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NrC-eh-lnq" secondAttribute="height" multiplier="1:1" id="Pxb-lb-7R2"/>
@@ -152,7 +152,7 @@
                                             <action selector="fourTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="uVv-ws-Mjp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xa-5k-o3H" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xa-5k-o3H" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="103" y="0.0" width="90" height="90.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2Xa-5k-o3H" secondAttribute="height" multiplier="1:1" id="QQt-BM-jsT"/>
@@ -172,7 +172,7 @@
                                             <action selector="fiveTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="bZf-NJ-682"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6R-d8-UcL" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6R-d8-UcL" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="206" y="0.5" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="LsR-UP-SFk"/>
@@ -197,7 +197,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="RwB-ls-ZdQ">
                                 <rect key="frame" x="0.0" y="269.5" width="296" height="90.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7Z-dw-X2D" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7Z-dw-X2D" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="0.0" y="0.5" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="EN4-cs-lvd"/>
@@ -217,7 +217,7 @@
                                             <action selector="sevenTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="AFw-FI-r6I"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbe-4h-aur" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbe-4h-aur" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="103" y="0.0" width="90" height="90.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="B11-VZ-pjx"/>
@@ -237,7 +237,7 @@
                                             <action selector="eightTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="TdS-sx-zba"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-uu-b2b" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-uu-b2b" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="206" y="0.5" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="3Fh-UH-MlI"/>
@@ -265,7 +265,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-yI-Z4W">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-Er-Dwo" customClass="FlashingButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-Er-Dwo" customClass="FlashingButton" customModule="MyLittlePinpad">
                                                 <rect key="frame" x="13" y="13.5" width="63" height="63"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yBs-Er-Dwo" secondAttribute="height" multiplier="1:1" id="F5c-P1-8iH"/>
@@ -285,7 +285,7 @@
                                             <constraint firstItem="yBs-Er-Dwo" firstAttribute="centerY" secondItem="2Tt-yI-Z4W" secondAttribute="centerY" id="fVJ-OP-Lxf"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-Y6-n1z" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-Y6-n1z" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="103" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kbl-Y6-n1z" secondAttribute="height" multiplier="1:1" id="2Wq-q7-SNb"/>
@@ -305,7 +305,7 @@
                                             <action selector="zeroTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="NZA-JC-FNX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txw-d8-elJ" customClass="RoundButton" customModule="MyLittlePinpad" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txw-d8-elJ" customClass="RoundButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="206" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Txw-d8-elJ" secondAttribute="height" multiplier="1:1" id="LEq-eA-5aB"/>

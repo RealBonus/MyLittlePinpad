@@ -14,8 +14,6 @@
 		4BAC43A6D0C0CD06A94DF533C8BEF40C /* MyLittlePinpad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 291909F4AE498F8407707D3D20E180D1 /* MyLittlePinpad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB6FE7147A07AA730DC1BBD2A1F1ABD4 /* Pods-MyLittlePinpad_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D906D309E4B788D035766FD2A7D1E /* Pods-MyLittlePinpad_Tests-dummy.m */; };
 		DDA86979A8762D3EDBEC16E830FDD11C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E9A73DAB204F2DC2001F1509 /* PinpadViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = E93D5973204F2866003DDE2C /* PinpadViewController.xib */; };
-		E9A73DAC204F2DC2001F1509 /* icons.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = E93D5982204F295A003DDE2C /* icons.xcassets */; };
 		E9A73DAD204F2DC2001F1509 /* FlashingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D5971204F2866003DDE2C /* FlashingButton.swift */; };
 		E9A73DAE204F2DC2001F1509 /* PinpadBiometryButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D5970204F2866003DDE2C /* PinpadBiometryButtonType.swift */; };
 		E9A73DAF204F2DC2001F1509 /* PinpadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D596C204F2865003DDE2C /* PinpadButton.swift */; };
@@ -397,8 +395,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A73DB4204F2E7B001F1509 /* MyLittlePinpad-dummy.m in Sources */,
-				E9A73DAB204F2DC2001F1509 /* PinpadViewController.xib in Sources */,
-				E9A73DAC204F2DC2001F1509 /* icons.xcassets in Sources */,
 				E9A73DAD204F2DC2001F1509 /* FlashingButton.swift in Sources */,
 				E9A73DAE204F2DC2001F1509 /* PinpadBiometryButtonType.swift in Sources */,
 				E9A73DAF204F2DC2001F1509 /* PinpadButton.swift in Sources */,
