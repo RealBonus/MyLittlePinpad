@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A73DAA204F2D1A001F1509 /* Assets */,
-				E9A73DA9204F2D03001F1509 /* Source */,
+				E9A73DA9204F2D03001F1509 /* Classes */,
 				5805E84E4C48FC4A6094E1B94DDFD12E /* Pod */,
 				8C51A66CB04BDE84CD7B7608F909DBEA /* Support Files */,
 			);
@@ -237,7 +237,7 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E9A73DA9204F2D03001F1509 /* Source */ = {
+		E9A73DA9204F2D03001F1509 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E93D5971204F2866003DDE2C /* FlashingButton.swift */,
@@ -248,7 +248,7 @@
 				E93D596D204F2865003DDE2C /* PinPlaceholderView.swift */,
 				E93D596F204F2865003DDE2C /* RoundButton.swift */,
 			);
-			path = Source;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		E9A73DAA204F2D1A001F1509 /* Assets */ = {

@@ -67,7 +67,7 @@ open class PinpadViewController: UIViewController {
 	@IBOutlet var biometryButton: FlashingButton!
 	
 	internal lazy var buttons: [RoundButton] = {
-		[oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, zeroButton, backspaceButton]
+		return [oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, zeroButton, backspaceButton]
 	}()
 	
 	// MARK: Digit constrains
@@ -85,7 +85,7 @@ open class PinpadViewController: UIViewController {
 	@IBOutlet var backspaceConstrain: NSLayoutConstraint!
 	
 	internal lazy var buttonsSizeConstrains: [NSLayoutConstraint] = {
-		[oneConstrain, twoConstrain, threeConstrain, fourConstrain, fiveConstrain, sixConstrain, sevenConstrain, eightConstrain, nineConstrain, zeroConstrain, biometryConstrain, backspaceConstrain]
+		return [oneConstrain, twoConstrain, threeConstrain, fourConstrain, fiveConstrain, sixConstrain, sevenConstrain, eightConstrain, nineConstrain, zeroConstrain, biometryConstrain, backspaceConstrain]
 	}()
 	
 	// MARK: Stacks
@@ -99,7 +99,7 @@ open class PinpadViewController: UIViewController {
 	@IBOutlet var placeholdersWrap: UIView!
 	
 	internal lazy var digitsStackViews: [UIStackView] = {
-		[firstStackView, secondStackView, thirdStackView, fourthStackView]
+		return [firstStackView, secondStackView, thirdStackView, fourthStackView]
 	}()
 
 	// MARK: Other
