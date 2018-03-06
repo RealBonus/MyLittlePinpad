@@ -1,0 +1,6 @@
+framework module Pods_MyLittlePinpad_Tests {
+  umbrella header "Pods-MyLittlePinpad_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

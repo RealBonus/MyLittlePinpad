@@ -1,15 +1,14 @@
 # MyLittlePinpad
 
-[![CI Status](http://img.shields.io/travis/realbonus/MyLittlePinpad.svg?style=flat)](https://travis-ci.org/realbonus/MyLittlePinpad)
-[![Version](https://img.shields.io/cocoapods/v/MyLittlePinpad.svg?style=flat)](http://cocoapods.org/pods/MyLittlePinpad)
-[![License](https://img.shields.io/cocoapods/l/MyLittlePinpad.svg?style=flat)](http://cocoapods.org/pods/MyLittlePinpad)
-[![Platform](https://img.shields.io/cocoapods/p/MyLittlePinpad.svg?style=flat)](http://cocoapods.org/pods/MyLittlePinpad)
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Example is pretty empty right now.
 
 ## Requirements
+Swift 4
+iOS 9
 
 ## Installation
 

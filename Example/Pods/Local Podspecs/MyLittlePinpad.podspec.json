@@ -1,0 +1,22 @@
+{
+  "name": "MyLittlePinpad",
+  "version": "0.1.0",
+  "summary": "A short description of MyLittlePinpad.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/realbonus/MyLittlePinpad",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "realbonus": "p.anokhov@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/realbonus/MyLittlePinpad.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MyLittlePinpad/Classes/**/*"
+}

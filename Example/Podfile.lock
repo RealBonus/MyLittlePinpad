@@ -1,0 +1,16 @@
+PODS:
+  - MyLittlePinpad (0.1.0)
+
+DEPENDENCIES:
+  - MyLittlePinpad (from `../`)
+
+EXTERNAL SOURCES:
+  MyLittlePinpad:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MyLittlePinpad: b93aa6d436e31a5bba931e5700ce7ab2132c79c3
+
+PODFILE CHECKSUM: 67495416506dee1c5f4b516fe80134a34b67c377
+
+COCOAPODS: 1.4.0
