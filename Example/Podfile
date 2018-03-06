@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MyLittlePinpad_Example' do
+  pod 'MyLittlePinpad', :path => '../'
+
+  target 'MyLittlePinpad_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
