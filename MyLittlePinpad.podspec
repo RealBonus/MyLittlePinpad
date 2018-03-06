@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   
   s.resource_bundles = {
     'MyLittlePinpad' => [
-		'Assets/PinpadViewController.xib',
-		'Assets/icons.xcassets/Face ID.imageset/*.png',
-		'Assets/icons.xcassets/Touch ID.imageset/*.png'
+		'MyLittlePinpad/Assets/PinpadViewController.xib',
+		'MyLittlePinpad/Assets/icons.xcassets/Face ID.imageset/*.png',
+		'MyLittlePinpad/Assets/icons.xcassets/Touch ID.imageset/*.png'
 	]
   }
 
