@@ -23,12 +23,13 @@ class ViewController: UIViewController {
 		let pinpad = PinpadViewController.instantiateFromResourceNib()
 		
 		pinpad.delegate = self
-		pinpad.buttonsSize = 87
-		pinpad.buttonsSpacing = 20
+		pinpad.buttonsSize = 70
+		pinpad.buttonsSpacing = 15
 		pinpad.placeholdersSpacing = 10
 		pinpad.placeholdersSize = 25
+		pinpad.placeholderViewHeight = 100
 		pinpad.pinDigits = 6
-		pinpad.biometryButtonType = .faceID
+		pinpad.biometryButtonType = .touchID
 		pinpad.bordersColor = UIColor.gray
 		pinpad.buttonsHighlightedColor = UIColor.lightGray
 		

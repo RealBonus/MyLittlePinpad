@@ -24,13 +24,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="KhJ-bX-pXH">
-                        <rect key="frame" x="0.0" y="84" width="375" height="573"/>
+                        <rect key="frame" x="0.0" y="84.5" width="375" height="572.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cir-Yw-vUJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <rect key="frame" x="27.5" y="0.0" width="320" height="50"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiV-6r-LH6">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="5UB-kN-kGn">
-                                <rect key="frame" x="39.5" y="126" width="296.5" height="90"/>
+                                <rect key="frame" x="39.5" y="126" width="296" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-LK-ARv" customClass="RoundedButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -100,7 +100,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFH-vk-nRs" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="103" y="0.0" width="90.5" height="90"/>
+                                        <rect key="frame" x="103" y="0.5" width="90" height="89.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vFH-vk-nRs" secondAttribute="height" multiplier="1:1" id="6Ps-MZ-oTR"/>
                                             <constraint firstAttribute="width" constant="90" id="cpu-h3-Bt9"/>
@@ -120,7 +120,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3p-mj-r5N" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="206.5" y="0.0" width="90" height="90"/>
+                                        <rect key="frame" x="206" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="X3p-mj-r5N" secondAttribute="height" multiplier="1:1" id="129-2b-T0a"/>
                                             <constraint firstAttribute="width" constant="90" id="2Ac-iR-XA9"/>
@@ -142,7 +142,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="zzX-FI-PnH">
-                                <rect key="frame" x="39.5" y="229" width="296.5" height="91"/>
+                                <rect key="frame" x="39.5" y="229" width="296" height="90.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrC-eh-lnq" customClass="RoundedButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="0.0" y="0.5" width="90" height="90"/>
@@ -165,7 +165,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xa-5k-o3H" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="103" y="0.0" width="90.5" height="91"/>
+                                        <rect key="frame" x="103" y="0.0" width="90" height="90.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2Xa-5k-o3H" secondAttribute="height" multiplier="1:1" id="QQt-BM-jsT"/>
                                             <constraint firstAttribute="width" constant="90" id="faZ-lk-Vbh"/>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6R-d8-UcL" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="206.5" y="0.5" width="90" height="90"/>
+                                        <rect key="frame" x="206" y="0.5" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="LsR-UP-SFk"/>
                                             <constraint firstAttribute="width" secondItem="m6R-d8-UcL" secondAttribute="height" multiplier="1:1" id="hLA-Z4-boq"/>
@@ -207,7 +207,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="RwB-ls-ZdQ">
-                                <rect key="frame" x="39.5" y="333" width="296.5" height="91"/>
+                                <rect key="frame" x="39.5" y="332.5" width="296" height="90.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7Z-dw-X2D" customClass="RoundedButton" customModule="MyLittlePinpad">
                                         <rect key="frame" x="0.0" y="0.5" width="90" height="90"/>
@@ -230,7 +230,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbe-4h-aur" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="103" y="0.0" width="90.5" height="91"/>
+                                        <rect key="frame" x="103" y="0.0" width="90" height="90.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="B11-VZ-pjx"/>
                                             <constraint firstAttribute="width" secondItem="Pbe-4h-aur" secondAttribute="height" multiplier="1:1" id="HKV-IM-M55"/>
@@ -250,7 +250,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-uu-b2b" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="206.5" y="0.5" width="90" height="90"/>
+                                        <rect key="frame" x="206" y="0.5" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="3Fh-UH-MlI"/>
                                             <constraint firstAttribute="width" secondItem="8ag-uu-b2b" secondAttribute="height" multiplier="1:1" id="jy9-ak-nPN"/>
@@ -271,69 +271,80 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="LIq-cJ-WdA">
-                                <rect key="frame" x="39.5" y="437" width="296.5" height="90"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaJ-0P-cAe">
+                                <rect key="frame" x="39.5" y="436" width="296" height="90.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-Er-Dwo" customClass="ScaledButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="yBs-Er-Dwo" secondAttribute="height" multiplier="1:1" id="50j-oO-c54"/>
-                                            <constraint firstAttribute="width" constant="90" id="Kzi-07-aQ9"/>
-                                        </constraints>
-                                        <state key="normal" image="Face ID"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
-                                                <real key="value" value="0.69999999999999996"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="biometryTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="q6N-Di-vKv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-Y6-n1z" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="103" y="0.0" width="90.5" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Kbl-Y6-n1z" secondAttribute="height" multiplier="1:1" id="2Wq-q7-SNb"/>
-                                            <constraint firstAttribute="width" constant="90" id="Uau-Fb-ER9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
-                                        <state key="normal" title="0"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="zeroTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="NZA-JC-FNX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txw-d8-elJ" customClass="RoundedButton" customModule="MyLittlePinpad">
-                                        <rect key="frame" x="206.5" y="0.0" width="90" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Txw-d8-elJ" secondAttribute="height" multiplier="1:1" id="LEq-eA-5aB"/>
-                                            <constraint firstAttribute="width" constant="90" id="tc0-v4-B4D"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
-                                        <state key="normal" title="⇦"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="backspaceTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="ITA-P2-mSa"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="LIq-cJ-WdA">
+                                        <rect key="frame" x="103" y="0.0" width="193" height="90.5"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-Er-Dwo" customClass="ScaledButton" customModule="MyLittlePinpad">
+                                                <rect key="frame" x="-90" y="0.0" width="90" height="90.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yBs-Er-Dwo" secondAttribute="height" multiplier="1:1" id="50j-oO-c54"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Kzi-07-aQ9"/>
+                                                </constraints>
+                                                <state key="normal" image="Face ID"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                        <real key="value" value="0.69999999999999996"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="biometryTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="q6N-Di-vKv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-Y6-n1z" customClass="RoundedButton" customModule="MyLittlePinpad">
+                                                <rect key="frame" x="0.0" y="0.5" width="90" height="89.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Kbl-Y6-n1z" secondAttribute="height" multiplier="1:1" id="2Wq-q7-SNb"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Uau-Fb-ER9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                                <state key="normal" title="0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="zeroTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="NZA-JC-FNX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txw-d8-elJ" customClass="RoundedButton" customModule="MyLittlePinpad">
+                                                <rect key="frame" x="103" y="0.0" width="90" height="90.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Txw-d8-elJ" secondAttribute="height" multiplier="1:1" id="LEq-eA-5aB"/>
+                                                    <constraint firstAttribute="width" constant="90" id="tc0-v4-B4D"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                                <state key="normal" title="⇦"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="backspaceTappedWithSender:" destination="mTv-Le-RE8" eventType="touchUpInside" id="ITA-P2-mSa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LIq-cJ-WdA" secondAttribute="trailing" id="GVC-zM-i84"/>
+                                    <constraint firstItem="LIq-cJ-WdA" firstAttribute="top" secondItem="KaJ-0P-cAe" secondAttribute="top" id="a77-zX-xEc"/>
+                                    <constraint firstAttribute="bottom" secondItem="LIq-cJ-WdA" secondAttribute="bottom" id="kGh-MI-bXX"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcD-Ac-BlK">
-                                <rect key="frame" x="161" y="540" width="53" height="33"/>
+                                <rect key="frame" x="161" y="539.5" width="53" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
@@ -341,6 +352,9 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="KaJ-0P-cAe" firstAttribute="width" secondItem="RwB-ls-ZdQ" secondAttribute="width" id="BJY-dn-WwU"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
