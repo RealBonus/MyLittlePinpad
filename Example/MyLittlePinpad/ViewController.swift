@@ -34,6 +34,7 @@ class ViewController: UIViewController {
 		
 		pinpad.commentLabel.text = "Lorem ipsum"
 		pinpad.commentLabel.isHidden = false
+		pinpad.cancelButton.setTitle("I changed my mind", for: .normal)
 		
 		pinpad.setColor(UIColor.black, for: .normal)
 		pinpad.setColor(UIColor.white, for: .highlighted)

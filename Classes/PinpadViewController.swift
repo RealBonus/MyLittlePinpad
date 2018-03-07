@@ -62,7 +62,7 @@ open class PinpadViewController: UIViewController {
 	
 	// MARK: Other
 	@IBOutlet public weak var commentLabel: UILabel!
-	@IBOutlet weak var cancelButton: UIButton!
+	@IBOutlet public weak var cancelButton: UIButton!
 	@IBOutlet var placeholdersHeightConstrain: NSLayoutConstraint!
 	@IBOutlet var bottomConstrain: NSLayoutConstraint!
 	@IBOutlet var background: UIView!
