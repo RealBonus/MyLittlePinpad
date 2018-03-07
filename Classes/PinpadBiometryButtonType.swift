@@ -27,16 +27,16 @@ internal extension PinpadBiometryButtonType {
 		}
 	}
 	
-	func cornerRadiusFor(size: CGFloat) -> CGFloat {
+	var roundingMode: RoundingMode {
 		switch self {
 		case .hidden:
-			return 0
-			
-		case .touchID:
-			return size/2
+			return .circle
 			
 		case .faceID:
-			return 9
+			return .customRadius(radius: 13)
+			
+		case .touchID:
+			return .circle
 		}
 	}
 }

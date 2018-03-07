@@ -14,13 +14,18 @@
 		4BAC43A6D0C0CD06A94DF533C8BEF40C /* MyLittlePinpad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 291909F4AE498F8407707D3D20E180D1 /* MyLittlePinpad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB6FE7147A07AA730DC1BBD2A1F1ABD4 /* Pods-MyLittlePinpad_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D906D309E4B788D035766FD2A7D1E /* Pods-MyLittlePinpad_Tests-dummy.m */; };
 		DDA86979A8762D3EDBEC16E830FDD11C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E9A73DAD204F2DC2001F1509 /* FlashingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D5971204F2866003DDE2C /* FlashingButton.swift */; };
+		E9147B642050695500145913 /* PinpadViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = E93D5973204F2866003DDE2C /* PinpadViewController.xib */; };
+		E9147B652050695500145913 /* icons.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = E93D5982204F295A003DDE2C /* icons.xcassets */; };
+		E9147B672050725D00145913 /* PinpadViewController+SetGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9147B662050725D00145913 /* PinpadViewController+SetGet.swift */; };
+		E9147B69205072F900145913 /* PinpadViewController+IBAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9147B68205072F900145913 /* PinpadViewController+IBAction.swift */; };
+		E9147B6B2050739F00145913 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9147B6A2050739F00145913 /* Helpers.swift */; };
+		E9147B6D2050750900145913 /* ScaledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9147B6C2050750900145913 /* ScaledButton.swift */; };
 		E9A73DAE204F2DC2001F1509 /* PinpadBiometryButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D5970204F2866003DDE2C /* PinpadBiometryButtonType.swift */; };
 		E9A73DAF204F2DC2001F1509 /* PinpadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D596C204F2865003DDE2C /* PinpadButton.swift */; };
-		E9A73DB0204F2DC2001F1509 /* PinpadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D596E204F2865003DDE2C /* PinpadDelegate.swift */; };
+		E9A73DB0204F2DC2001F1509 /* PinpadViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D596E204F2865003DDE2C /* PinpadViewControllerDelegate.swift */; };
 		E9A73DB1204F2DC2001F1509 /* PinpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D5972204F2866003DDE2C /* PinpadViewController.swift */; };
 		E9A73DB2204F2DC2001F1509 /* PinPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D596D204F2865003DDE2C /* PinPlaceholderView.swift */; };
-		E9A73DB3204F2DC2001F1509 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D596F204F2865003DDE2C /* RoundButton.swift */; };
+		E9A73DB3204F2DC2001F1509 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D596F204F2865003DDE2C /* RoundedButton.swift */; };
 		E9A73DB4204F2E7B001F1509 /* MyLittlePinpad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281DFE85D2AF9D55285480A333D35 /* MyLittlePinpad-dummy.m */; };
 		F61C71284B35D3E4A41DC18602E1505F /* Pods-MyLittlePinpad_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6F993CEC44F296616D45A6B3090FD6 /* Pods-MyLittlePinpad_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -67,12 +72,15 @@
 		E603BCBB67739411B1E31AB14D5D5498 /* Pods-MyLittlePinpad_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyLittlePinpad_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		E6B704C28CFBC874D974B55A2D884AB1 /* Pods-MyLittlePinpad_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyLittlePinpad_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E9038B2C354C15AE6109EC21E8F4201A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9147B662050725D00145913 /* PinpadViewController+SetGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinpadViewController+SetGet.swift"; sourceTree = "<group>"; };
+		E9147B68205072F900145913 /* PinpadViewController+IBAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinpadViewController+IBAction.swift"; sourceTree = "<group>"; };
+		E9147B6A2050739F00145913 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		E9147B6C2050750900145913 /* ScaledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledButton.swift; sourceTree = "<group>"; };
 		E93D596C204F2865003DDE2C /* PinpadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinpadButton.swift; sourceTree = "<group>"; };
 		E93D596D204F2865003DDE2C /* PinPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPlaceholderView.swift; sourceTree = "<group>"; };
-		E93D596E204F2865003DDE2C /* PinpadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinpadDelegate.swift; sourceTree = "<group>"; };
-		E93D596F204F2865003DDE2C /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		E93D596E204F2865003DDE2C /* PinpadViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinpadViewControllerDelegate.swift; sourceTree = "<group>"; };
+		E93D596F204F2865003DDE2C /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		E93D5970204F2866003DDE2C /* PinpadBiometryButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinpadBiometryButtonType.swift; sourceTree = "<group>"; };
-		E93D5971204F2866003DDE2C /* FlashingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashingButton.swift; sourceTree = "<group>"; };
 		E93D5972204F2866003DDE2C /* PinpadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinpadViewController.swift; sourceTree = "<group>"; };
 		E93D5973204F2866003DDE2C /* PinpadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinpadViewController.xib; sourceTree = "<group>"; };
 		E93D5982204F295A003DDE2C /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icons.xcassets; sourceTree = "<group>"; };
@@ -238,13 +246,16 @@
 		E9A73DA9204F2D03001F1509 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E93D5971204F2866003DDE2C /* FlashingButton.swift */,
-				E93D5970204F2866003DDE2C /* PinpadBiometryButtonType.swift */,
-				E93D596C204F2865003DDE2C /* PinpadButton.swift */,
-				E93D596E204F2865003DDE2C /* PinpadDelegate.swift */,
 				E93D5972204F2866003DDE2C /* PinpadViewController.swift */,
+				E9147B662050725D00145913 /* PinpadViewController+SetGet.swift */,
+				E9147B68205072F900145913 /* PinpadViewController+IBAction.swift */,
+				E93D596E204F2865003DDE2C /* PinpadViewControllerDelegate.swift */,
+				E93D596C204F2865003DDE2C /* PinpadButton.swift */,
+				E93D5970204F2866003DDE2C /* PinpadBiometryButtonType.swift */,
 				E93D596D204F2865003DDE2C /* PinPlaceholderView.swift */,
-				E93D596F204F2865003DDE2C /* RoundButton.swift */,
+				E93D596F204F2865003DDE2C /* RoundedButton.swift */,
+				E9147B6C2050750900145913 /* ScaledButton.swift */,
+				E9147B6A2050739F00145913 /* Helpers.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -394,14 +405,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9147B672050725D00145913 /* PinpadViewController+SetGet.swift in Sources */,
+				E9147B642050695500145913 /* PinpadViewController.xib in Sources */,
+				E9147B652050695500145913 /* icons.xcassets in Sources */,
 				E9A73DB4204F2E7B001F1509 /* MyLittlePinpad-dummy.m in Sources */,
-				E9A73DAD204F2DC2001F1509 /* FlashingButton.swift in Sources */,
+				E9147B69205072F900145913 /* PinpadViewController+IBAction.swift in Sources */,
 				E9A73DAE204F2DC2001F1509 /* PinpadBiometryButtonType.swift in Sources */,
 				E9A73DAF204F2DC2001F1509 /* PinpadButton.swift in Sources */,
-				E9A73DB0204F2DC2001F1509 /* PinpadDelegate.swift in Sources */,
+				E9147B6B2050739F00145913 /* Helpers.swift in Sources */,
+				E9A73DB0204F2DC2001F1509 /* PinpadViewControllerDelegate.swift in Sources */,
 				E9A73DB1204F2DC2001F1509 /* PinpadViewController.swift in Sources */,
 				E9A73DB2204F2DC2001F1509 /* PinPlaceholderView.swift in Sources */,
-				E9A73DB3204F2DC2001F1509 /* RoundButton.swift in Sources */,
+				E9147B6D2050750900145913 /* ScaledButton.swift in Sources */,
+				E9A73DB3204F2DC2001F1509 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

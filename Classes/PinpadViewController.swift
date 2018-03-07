@@ -8,67 +8,23 @@
 import UIKit
 
 open class PinpadViewController: UIViewController {
-	public static func instantiateFromNib() -> PinpadViewController {
-		let podBundle = Bundle(for: PinpadViewController.self)
-		let resourceBundle = Bundle(url: podBundle.url(forResource: "MyLittlePinpad", withExtension: "bundle")!)!
-		
-		return resourceBundle.loadNibNamed("PinpadViewController", owner: nil, options: nil)!.first as! PinpadViewController
-	}
-
-	// MARK: - Properties
-	public weak var delegate: PinpadDelegate?
-	
-	/// Amount of digits in pincode
-	public var pinDigits: Int = 6 {
-		didSet {
-			remakePlaceholders(count: pinDigits)
-		}
-	}
-	
-	/// Entered digits
-	private(set) var digits: [Int] = []
-	
-	public var pin: String {
-		return digits.map({String($0)}).joined()
-	}
-	
-	public var biometryButtonType: PinpadBiometryButtonType = .faceID {
-		didSet {
-			switch biometryButtonType {
-			case .hidden:
-				biometryButton.isHidden = true
-				
-			case .faceID:
-				fallthrough
-			case .touchID:
-				biometryButton.isHidden = false
-				
-				biometryButton.layer.cornerRadius = biometryButtonType.cornerRadiusFor(size: biometryButton.bounds.width)
-				
-				let bundle = Bundle(for: PinpadViewController.self)
-				if let imageName = biometryButtonType.image, let image = UIImage(named: imageName, in: bundle, compatibleWith: nil) {
-					biometryButton.setImage(image, for: .normal)
-				}
-			}
-		}
-	}
-	
 	// MARK: - IBOutlets
 	// MARK: Digit buttons
-	@IBOutlet var oneButton: RoundButton!
-	@IBOutlet var twoButton: RoundButton!
-	@IBOutlet var threeButton: RoundButton!
-	@IBOutlet var fourButton: RoundButton!
-	@IBOutlet var fiveButton: RoundButton!
-	@IBOutlet var sixButton: RoundButton!
-	@IBOutlet var sevenButton: RoundButton!
-	@IBOutlet var eightButton: RoundButton!
-	@IBOutlet var nineButton: RoundButton!
-	@IBOutlet var zeroButton: RoundButton!
-	@IBOutlet var backspaceButton: RoundButton!
-	@IBOutlet var biometryButton: FlashingButton!
+	@IBOutlet var oneButton: RoundedButton!
+	@IBOutlet var twoButton: RoundedButton!
+	@IBOutlet var threeButton: RoundedButton!
+	@IBOutlet var fourButton: RoundedButton!
+	@IBOutlet var fiveButton: RoundedButton!
+	@IBOutlet var sixButton: RoundedButton!
+	@IBOutlet var sevenButton: RoundedButton!
+	@IBOutlet var eightButton: RoundedButton!
+	@IBOutlet var nineButton: RoundedButton!
+	@IBOutlet var zeroButton: RoundedButton!
+	@IBOutlet var backspaceButton: RoundedButton!
 	
-	internal lazy var buttons: [RoundButton] = {
+	@IBOutlet var biometryButton: RoundedButton!
+	
+	internal lazy var buttons: [RoundedButton] = {
 		return [oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, zeroButton, backspaceButton]
 	}()
 	
@@ -103,7 +59,7 @@ open class PinpadViewController: UIViewController {
 	internal lazy var digitsStackViews: [UIStackView] = {
 		return [firstStackView, secondStackView, thirdStackView, fourthStackView]
 	}()
-
+	
 	// MARK: Other
 	@IBOutlet public weak var commentLabel: UILabel!
 	@IBOutlet weak var cancelButton: UIButton!
@@ -113,7 +69,47 @@ open class PinpadViewController: UIViewController {
 	public var backgroundView: UIView { return background }
 	
 	
-	// MARK: Placeholders
+	// MARK: - Properties
+	public weak var delegate: PinpadViewControllerDelegate?
+	
+	/// Amount of digits in pincode. Default = 4
+	public var pinDigits: Int = 4 {
+		didSet {
+			remakePlaceholders(count: pinDigits)
+		}
+	}
+	
+	/// Entered digits
+	private(set) var digits: [Int] = []
+	
+	
+	/// Entered pin
+	public var pin: String {
+		return digits.map({String($0)}).joined()
+	}
+	
+	public var biometryButtonType: PinpadBiometryButtonType = .faceID {
+		didSet {
+			switch biometryButtonType {
+			case .hidden:
+				biometryButton.isHidden = true
+				
+			case .faceID:
+				fallthrough
+			case .touchID:
+				biometryButton.isHidden = false
+				
+				let bundle = Bundle(for: PinpadViewController.self)
+				if let imageName = biometryButtonType.image, let image = UIImage(named: imageName, in: bundle, compatibleWith: nil) {
+					biometryButton.setImage(image, for: .normal)
+					biometryButton.roundingMode = biometryButtonType.roundingMode
+				}
+			}
+		}
+	}
+	
+	
+	// MARK: - Placeholders
 	internal var placeholders: [PinPlaceholderView] = []
 	
 	public var placeholdersSize: CGFloat = 20 {
@@ -134,104 +130,7 @@ open class PinpadViewController: UIViewController {
 		}
 	}
 	
-	
-	// MARK: - Lifecycle
-	override open func viewDidLoad() {
-        super.viewDidLoad()
-		
-		bottomConstrain.constant = (self.view.bounds.width - mainStackView.bounds.width)/4
-		
-		for pin in placeholdersStackView.subviews.flatMap({$0 as? PinPlaceholderView}) {
-			pin.borderColor = bordersColor
-			placeholders.append(pin)
-		}
-		
-		remakePlaceholders(count: pinDigits)
-    }
-	
-	
-	// MARK: - IBActions
-	@IBAction func oneTapped(sender: UIButton) {
-		pinAppend(digit: 1)
-	}
-
-	@IBAction func twoTapped(sender: UIButton) {
-		pinAppend(digit: 2)
-	}
-
-	@IBAction func threeTapped(sender: UIButton) {
-		pinAppend(digit: 3)
-	}
-
-	@IBAction func fourTapped(sender: UIButton) {
-		pinAppend(digit: 4)
-	}
-
-	@IBAction func fiveTapped(sender: UIButton) {
-		pinAppend(digit: 5)
-	}
-
-	@IBAction func sixTapped(sender: UIButton) {
-		pinAppend(digit: 6)
-	}
-
-	@IBAction func sevenTapped(sender: UIButton) {
-		pinAppend(digit: 7)
-	}
-
-	@IBAction func eightTapped(sender: UIButton) {
-		pinAppend(digit: 8)
-	}
-
-	@IBAction func nineTapped(sender: UIButton) {
-		pinAppend(digit: 9)
-	}
-
-	@IBAction func zeroTapped(sender: UIButton) {
-		pinAppend(digit: 0)
-	}
-
-	@IBAction func backspaceTapped(sender: UIButton) {
-		pinRemoveLatsDigit()
-	}
-	
-	@IBAction func biometryTapped(sender: UIButton) {
-		delegate?.pinpadDidTapBiometryButton(self)
-	}
-	
-	@IBAction func cancelTapped(sender: UIButton) {
-		delegate?.pinpadDidCancel(self)
-	}
-	
-	
-	// MARK: - Pin
-	private func pinAppend(digit: Int) {
-		guard digits.count < pinDigits else {
-			return
-		}
-		
-		digits.append(digit)
-		
-		refreshPlaceholders()
-		
-		if digits.count >= pinDigits {
-			delegate?.pinpad(self, didEnterPin: pin)
-		}
-	}
-	
-	private func pinRemoveLatsDigit() {
-		if digits.count > 0 {
-			digits.removeLast()
-		}
-		
-		refreshPlaceholders()
-	}
-	
-	public func clearPin() {
-		digits.removeAll()
-		refreshPlaceholders()
-	}
-	
+	// MARK: privates
 	private func refreshPlaceholders() {
 		let count = digits.count
 		
@@ -260,31 +159,88 @@ open class PinpadViewController: UIViewController {
 		}
 		
 		if count > placeholders.count {
+			placeholders.forEach({refreshPlaceholder($0)})
+			
 			for _ in placeholders.count..<count {
 				let placeholder = PinPlaceholderView()
+				
 				placeholder.heightAnchor.constraint(equalToConstant: placeholdersSize).isActive = true
 				placeholder.widthAnchor.constraint(equalToConstant: placeholdersSize).isActive = true
+				placeholder.constraints.forEach({$0.identifier = "wh"})
 				
-				placeholder.borderColor = bordersColor
-				placeholder.borderWidth = bordersWidth
-				placeholder.activeColor = placeholderActiveColor
+				refreshPlaceholder(placeholder)
 				placeholders.append(placeholder)
 				placeholdersStackView.addArrangedSubview(placeholder)
 			}
 		} else {
-			for i in count..<placeholders.count {
-				placeholders.remove(at: i)
+			for _ in count..<placeholders.count {
+				placeholders.removeLast().removeFromSuperview()
 			}
+			
+			placeholders.forEach({refreshPlaceholder($0)})
 		}
 	}
 	
+	private func refreshPlaceholder(_ placeholder: PinPlaceholderView) {
+		placeholder.constraints.filter({$0.identifier == "wh"}).forEach({$0.constant = placeholdersSize})
+		
+		placeholder.borderColor = bordersColor
+		placeholder.borderWidth = bordersWidth
+		placeholder.activeColor = placeholderActiveColor
+	}
 	
-	// MARK: - Other
+	// MARK: - Pin
 	
+	/// Clear digits, start again.
+	public func clearPin() {
+		digits.removeAll()
+		refreshPlaceholders()
+	}
+	
+	// MARK: privates
+	internal func pinAppend(digit: Int) {
+		guard digits.count < pinDigits else {
+			return
+		}
+		
+		digits.append(digit)
+		
+		refreshPlaceholders()
+		
+		if digits.count >= pinDigits {
+			delegate?.pinpad(self, didEnterPin: pin)
+		}
+	}
+	
+	internal func pinRemoveLatsDigit() {
+		if digits.count > 0 {
+			digits.removeLast()
+		}
+		
+		refreshPlaceholders()
+	}
+	
+	
+	// MARK: - Lifecycle
+	override open func viewDidLoad() {
+		super.viewDidLoad()
+		
+		bottomConstrain.constant = (self.view.bounds.width - firstStackView.bounds.width)/4
+		
+		for pin in placeholdersStackView.subviews.flatMap({$0 as? PinPlaceholderView}) {
+			pin.borderColor = bordersColor
+			placeholders.append(pin)
+		}
+		
+		remakePlaceholders(count: pinDigits)
+	}
+	
+	
+	// MARK: - Animations
 	
 	/// Play wobble animation.
 	///
-	/// - Parameter feedback: play haptic 'Error' feedback. **Requires iOS 10 or later & iPhone 7 or later.**
+	/// - Parameter feedback: play haptic 'Error' feedback. Default is true. **Requires iOS 10 or later & iPhone 7 or later.**
 	public func playWrongPinAnimation(withHapticFeedback feedback: Bool = true) {
 		let animation = CABasicAnimation(keyPath: "position")
 		animation.duration = 0.05
@@ -300,122 +256,6 @@ open class PinpadViewController: UIViewController {
 				let notification = UINotificationFeedbackGenerator()
 				notification.notificationOccurred(.error)
 			}
-		}
-	}
-}
-
-
-// MARK: - Setters & Getters
-extension PinpadViewController {
-	
-	// MARK: Border
-	
-	public var bordersWidth: CGFloat {
-		get {
-			return zeroButton.borderWidth
-		}
-		set {
-			buttons.forEach {$0.borderWidth = newValue}
-			placeholders.forEach {$0.borderWidth = newValue}
-		}
-	}
-	
-	public var bordersColor: UIColor? {
-		get {
-			return zeroButton.borderColor
-		}
-		set {
-			buttons.forEach {$0.borderColor = newValue}
-			placeholders.forEach {$0.borderColor = newValue}
-		}
-	}
-	
-	
-	// MARK: Buttons color
-	
-	public var buttonsHighlightedColor: UIColor? {
-		get {
-			return zeroButton.highlightedBackgroundColor
-		}
-		set {
-			buttons.forEach {$0.highlightedBackgroundColor = newValue}
-			biometryButton.highlightedBackgroundColor = newValue
-		}
-	}
-	
-	public var buttonsBackgroundColor: UIColor? {
-		get {
-			return zeroButton.normalBackgroundColor
-		}
-		set {
-			buttons.forEach {$0.normalBackgroundColor = newValue}
-			placeholders.forEach {$0.backgroundColor = newValue}
-			biometryButton.normalBackgroundColor = newValue
-		}
-	}
-	
-	public func setColor(_ color: UIColor?, for state: UIControlState) {
-		buttons.forEach {$0.setTitleColor(color, for: state)}
-		cancelButton.setTitleColor(color, for: state)
-		
-		if state == .normal {
-			biometryButton.tintColor = color
-		}
-	}
-	
-	
-	// MARK: Fonts
-	
-	public var buttonsFont: UIFont {
-		get {
-			return zeroButton.titleLabel!.font
-		}
-		set {
-			buttons.forEach {$0.titleLabel!.font = newValue}
-		}
-	}
-	
-	
-	// MARK: Buttons sizes
-	
-	public var buttonsSize: CGFloat {
-		get {
-			return zeroConstrain.constant
-		}
-		set {
-			buttonsSizeConstrains.forEach {$0.constant = newValue}
-			buttons.forEach {$0.layoutIfNeeded()}
-		}
-	}
-	
-	public var buttonsSpacing: CGFloat {
-		get {
-			return firstStackView.spacing
-		}
-		set {
-			digitsStackViews.forEach {$0.spacing = newValue}
-			mainStackView.spacing = newValue
-		}
-	}
-	
-	
-	// MARK: Placeholders
-	
-	public var placeholdersSpacing: CGFloat {
-		get {
-			return placeholdersStackView.spacing
-		}
-		set {
-			placeholdersStackView.spacing = newValue
-		}
-	}
-	
-	public var placeholderViewHeight: CGFloat {
-		get {
-			return placeholdersHeightConstrain.constant
-		}
-		set {
-			placeholdersHeightConstrain.constant = newValue
 		}
 	}
 }
