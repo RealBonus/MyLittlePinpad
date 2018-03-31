@@ -94,9 +94,7 @@ open class PinpadViewController: UIViewController {
 			case .hidden:
 				biometryButton.isHidden = true
 				
-			case .faceID:
-				fallthrough
-			case .touchID:
+			case .faceID, .touchID:
 				biometryButton.isHidden = false
 				
 				let bundle = Bundle(for: PinpadViewController.self)
@@ -227,7 +225,7 @@ open class PinpadViewController: UIViewController {
 		
 		bottomConstrain.constant = (self.view.bounds.width - firstStackView.bounds.width)/4
 		
-		for pin in placeholdersStackView.subviews.flatMap({$0 as? PinPlaceholderView}) {
+		for pin in placeholdersStackView.subviews.compactMap({$0 as? PinPlaceholderView}) {
 			pin.borderColor = bordersColor
 			placeholders.append(pin)
 		}
