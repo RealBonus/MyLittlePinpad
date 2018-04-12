@@ -56,7 +56,7 @@ open class RoundedButton: UIButton {
 		didSet {
 			switch roundingMode {
 			case .none:
-				return
+				layer.cornerRadius = 0
 				
 			case .circle:
 				if frame.width < frame.height {
@@ -75,7 +75,7 @@ open class RoundedButton: UIButton {
 		didSet {
 			switch roundingMode {
 			case .none:
-				return
+				layer.cornerRadius = 0
 				
 			case .circle:
 				if bounds.width < bounds.height {
