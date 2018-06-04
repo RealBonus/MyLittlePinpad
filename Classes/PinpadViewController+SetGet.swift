@@ -81,14 +81,14 @@ extension PinpadViewController {
 	// MARK: Buttons sizes
 	
 	public var buttonsSize: CGFloat {
-		get {
-			return zeroConstrain.constant
-		}
-		set {
-			buttonsSizeConstrains.forEach {$0.constant = newValue}
-			buttons.forEach {$0.layoutIfNeeded()}
-		}
-	}
+        get {
+            return 0.0 //zeroConstrain.constant
+        }
+        set {
+//            buttonsSizeConstrains.forEach {$0.constant = newValue}
+//            buttons.forEach {$0.layoutIfNeeded()}
+        }
+    }
 	
 	public var buttonsSpacing: CGFloat {
 		get {

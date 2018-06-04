@@ -43,7 +43,7 @@ open class PinpadViewController: UIViewController {
 	@IBOutlet var backspaceConstrain: NSLayoutConstraint!
 	
 	internal lazy var buttonsSizeConstrains: [NSLayoutConstraint] = {
-		return [oneConstrain, twoConstrain, threeConstrain, fourConstrain, fiveConstrain, sixConstrain, sevenConstrain, eightConstrain, nineConstrain, zeroConstrain, biometryConstrain, backspaceConstrain]
+		return []//[oneConstrain, twoConstrain, threeConstrain, fourConstrain, fiveConstrain, sixConstrain, sevenConstrain, eightConstrain, nineConstrain, zeroConstrain, biometryConstrain, backspaceConstrain]
 	}()
 	
 	// MARK: Stacks
@@ -223,7 +223,7 @@ open class PinpadViewController: UIViewController {
 	override open func viewDidLoad() {
 		super.viewDidLoad()
 		
-		bottomConstrain.constant = (self.view.bounds.width - firstStackView.bounds.width)/4
+//        bottomConstrain.constant = (self.view.bounds.width - firstStackView.bounds.width)/4
 		
 		for pin in placeholdersStackView.subviews.compactMap({$0 as? PinPlaceholderView}) {
 			pin.borderColor = bordersColor
