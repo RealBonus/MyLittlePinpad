@@ -272,10 +272,9 @@
                                         <rect key="frame" x="92" y="0.0" width="171" height="80.5"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-Er-Dwo" customClass="ScaledButton" customModule="MyLittlePinpad">
-                                                <rect key="frame" x="-90" y="-5" width="90" height="90.5"/>
+                                                <rect key="frame" x="-79.5" y="0.5" width="79.5" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yBs-Er-Dwo" secondAttribute="height" multiplier="1:1" id="50j-oO-c54"/>
-                                                    <constraint firstAttribute="width" constant="90" id="Kzi-07-aQ9"/>
                                                 </constraints>
                                                 <state key="normal" image="Face ID"/>
                                                 <userDefinedRuntimeAttributes>
@@ -326,6 +325,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yBs-Er-Dwo" firstAttribute="width" secondItem="Kbl-Y6-n1z" secondAttribute="width" id="ngL-rj-299"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -371,7 +373,6 @@
                 <outlet property="background" destination="XdZ-aP-2dF" id="H50-wx-xHv"/>
                 <outlet property="backspaceButton" destination="Txw-d8-elJ" id="n5X-aD-GUT"/>
                 <outlet property="biometryButton" destination="yBs-Er-Dwo" id="cY3-ts-kdK"/>
-                <outlet property="biometryConstrain" destination="Kzi-07-aQ9" id="rdK-QY-rtu"/>
                 <outlet property="cancelButton" destination="OcD-Ac-BlK" id="b63-Bh-peq"/>
                 <outlet property="commentLabel" destination="GiV-6r-LH6" id="RUr-9u-0i3"/>
                 <outlet property="eightButton" destination="Pbe-4h-aur" id="YGQ-bL-9kc"/>
