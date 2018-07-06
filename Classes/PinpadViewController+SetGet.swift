@@ -120,4 +120,25 @@ extension PinpadViewController {
 			placeholdersHeightConstrain.constant = newValue
 		}
 	}
+	
+	
+	// MARK: Sizes
+	
+	public var bottomSpacing: CGFloat {
+		get {
+			return cancelButtonBottomConstrain.constant
+		}
+		set {
+			cancelButtonBottomConstrain.constant = newValue
+		}
+	}
+	
+	public var pinpadToCancelSpacing: CGFloat {
+		get {
+			return pinpadToCancelConstrain.constant
+		}
+		set {
+			pinpadToCancelConstrain.constant = newValue
+		}
+	}
 }

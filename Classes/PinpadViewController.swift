@@ -64,7 +64,8 @@ open class PinpadViewController: UIViewController {
 	@IBOutlet public weak var commentLabel: UILabel!
 	@IBOutlet public weak var cancelButton: UIButton!
 	@IBOutlet var placeholdersHeightConstrain: NSLayoutConstraint!
-	@IBOutlet var bottomConstrain: NSLayoutConstraint!
+	@IBOutlet weak var cancelButtonBottomConstrain: NSLayoutConstraint!
+	@IBOutlet weak var pinpadToCancelConstrain: NSLayoutConstraint!
 	@IBOutlet var background: UIView!
 	public var backgroundView: UIView { return background }
 	
@@ -222,8 +223,6 @@ open class PinpadViewController: UIViewController {
 	// MARK: - Lifecycle
 	override open func viewDidLoad() {
 		super.viewDidLoad()
-		
-		bottomConstrain.constant = (self.view.bounds.width - firstStackView.bounds.width)/4
 		
 		for pin in placeholdersStackView.subviews.compactMap({$0 as? PinPlaceholderView}) {
 			pin.borderColor = bordersColor

@@ -27,7 +27,15 @@ class ViewController: UIViewController {
 		pinpad.buttonsSpacing = 15
 		pinpad.placeholdersSpacing = 10
 		pinpad.placeholdersSize = 25
-		pinpad.placeholderViewHeight = 100
+		
+		if view.frame.height > 600 {
+			pinpad.placeholderViewHeight = 100
+		} else {
+			pinpad.placeholderViewHeight = 50	// iPhone 5
+			pinpad.bottomSpacing = 24
+			pinpad.pinpadToCancelSpacing = 14
+		}
+		
 		pinpad.pinDigits = 6
 		pinpad.biometryButtonType = .touchID
 		pinpad.bordersColor = UIColor.gray
