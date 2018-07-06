@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 	]
   }
 
-  s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
 end
