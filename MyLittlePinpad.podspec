@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyLittlePinpad'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'My Little minimalistic pinpad! Need a pincode from a user? Got it!'
 
   s.description      = 'Simple minimalistic pinpad for entering pincodes. With a magic biometry button.'
