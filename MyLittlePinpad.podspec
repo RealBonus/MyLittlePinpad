@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyLittlePinpad'
-  s.version          = '0.2.5'
+  s.version          = '0.3'
   s.summary          = 'My Little minimalistic pinpad! Need a pincode from a user? Got it!'
 
   s.description      = 'Simple minimalistic pinpad for entering pincodes. With a magic biometry button.'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.author           = { 'realbonus' => 'p.anokhov@gmail.com' }
   s.source           = { :git => 'https://github.com/realbonus/MyLittlePinpad.git', :tag => s.version.to_s }
 
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
   s.ios.deployment_target = '9.3'
   
   s.source_files = 'Classes/*'
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 	]
   }
 
-  s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 end

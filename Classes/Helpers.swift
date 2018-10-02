@@ -21,7 +21,7 @@ extension PinpadViewController {
 		} else {
 			var controller: PinpadViewController! = nil
 			DispatchQueue.main.sync {
-				controller = bundle.loadNibNamed("PinpadViewController", owner: nil, options: nil)!.first as! PinpadViewController
+                controller = bundle.loadNibNamed("PinpadViewController", owner: nil, options: nil)!.first as? PinpadViewController
 			}
 			return controller
 		}

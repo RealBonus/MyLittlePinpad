@@ -56,7 +56,7 @@ extension PinpadViewController {
 		}
 	}
 	
-	public func setColor(_ color: UIColor?, for state: UIControlState) {
+	public func setColor(_ color: UIColor?, for state: UIControl.State) {
 		buttons.forEach {$0.setTitleColor(color, for: state)}
 		cancelButton.setTitleColor(color, for: state)
 		
