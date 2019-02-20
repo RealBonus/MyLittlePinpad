@@ -92,8 +92,21 @@ open class RoundedButton: UIButton {
 	
 	
 	// MARK: - Flashing
-	open var highlightedBackgroundColor: UIColor?
-	open var normalBackgroundColor: UIColor? = nil
+    open var highlightedBackgroundColor: UIColor? {
+        didSet {
+            if isHighlighted {
+                backgroundColor = highlightedBackgroundColor
+            }
+        }
+    }
+    
+    open var normalBackgroundColor: UIColor? = nil {
+        didSet {
+            if !isHighlighted {
+                backgroundColor = normalBackgroundColor
+            }
+        }
+    }
 	
 	override open var isHighlighted: Bool {
 		didSet {
